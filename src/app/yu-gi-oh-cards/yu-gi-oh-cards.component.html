@@ -1,6 +1,6 @@
 <h1>Time to duel</h1>
 
-<div class="ui-g-4" *ngFor="let card of result[0]">
+<div class="ui-g-4" *ngFor="let card of result[0-99]">
   <div class="ui-g-4">
       <a a routerLink='/Details/{{card.id}}'>   
       <img src="{{card?.image_url}}">

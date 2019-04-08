@@ -7,24 +7,34 @@ import { HomeComponent } from './home/home.component';
 import { YuGiOhCardsComponent } from './yu-gi-oh-cards/yu-gi-oh-cards.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+
+
 import {AccordionModule} from 'primeng/accordion';
-import { CardDetailsComponent } from './card-details/card-details.component';  
+import {BreadcrumbModule} from 'primeng/breadcrumb';
+
+import { CardDetailsComponent } from './card-details/card-details.component';
+import { MenuToolBarComponent } from './menu-tool-bar/menu-tool-bar.component';  
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     YuGiOhCardsComponent,
-    CardDetailsComponent
+    CardDetailsComponent,
+    MenuToolBarComponent,
+  
+    
   ],
   imports: [
     BrowserModule,
+    BreadcrumbModule,
     AccordionModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path: "home", component: HomeComponent},
       { path: "Yugi", component: YuGiOhCardsComponent},
+      {path: "Menu", component:MenuToolBarComponent},
       {path: "Details/:id", component: CardDetailsComponent},
       { path: "", redirectTo: "home", pathMatch: "full"},
       

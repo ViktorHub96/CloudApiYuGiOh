@@ -1,16 +1,15 @@
-<p>
-  card-details works!
-</p>
-
-<div class="ui-g-3">   
-    <img src="{{card?.image_url}}">
+<router-outlet></router-outlet>
+<div class="ui-g" *ngFor="let cardId of result[0]">
+<div class="ui-g-4">   
+    <img src="{{cardId.image_url}}">
     <!-- <a class="waves-effect waves-light btn" (click)=AddToDeck(card.id)>Add Card to deck</a> -->
 </div>
-<div  class="ui-g-9">
-    <span id="name">{{result?.card?.name}} </span>
-    <br>
-   <!--  <div *ngFor="let attack of result?.card?.attacks">
-    <span id="super"> {{attack.name}} </span> -->
-      
+<div class="ui-g-8">
+    <h1>{{cardId.name}} </h1>
+    <h2>Type of card: {{cardId.type}} </h2>
+    <h2>Race of card: {{cardId.race}} </h2>
+    <h2 >Set of card: {{cardId.archetype}} </h2>    
+ 
+</div>
 </div>
 

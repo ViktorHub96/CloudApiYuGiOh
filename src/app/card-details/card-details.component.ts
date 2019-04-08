@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
+
+
 @Component({
   selector: 'app-card-details',
   templateUrl: './card-details.component.html',
@@ -17,10 +19,15 @@ export class CardDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params =>
 
-      this.http.get("https://api.pokemontcg.io/v1/cards/" + params.id)
+      this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php" + params.id)
         .subscribe(data => {
           this.result = data;
+          console.log(params.id)
+          console.log(data)
+          console.log(this.result)
         }));
+
+        
   }
 
 }
