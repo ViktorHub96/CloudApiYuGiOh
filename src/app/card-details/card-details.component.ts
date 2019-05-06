@@ -19,7 +19,7 @@ export class CardDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params =>
 
-      this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php" + params.id)
+      this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?name=" + params.id)
         .subscribe(data => {
           this.result = data;
           console.log(params.id)

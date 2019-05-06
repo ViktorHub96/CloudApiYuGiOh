@@ -19,6 +19,7 @@ export class YuGiOhCardsComponent implements OnInit {
       .subscribe(data => {
         this.result = data;
         console.log(this.result)
+        console.log("Kaarten laden")
       },err => console.log(err));
     
     
