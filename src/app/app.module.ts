@@ -7,11 +7,12 @@ import { HomeComponent } from './home/home.component';
 import { YuGiOhCardsComponent } from './yu-gi-oh-cards/yu-gi-oh-cards.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
-
+import {ButtonModule} from 'primeng/button';
+//import {MenuItem} from 'primeng/api';
 import {AccordionModule} from 'primeng/accordion';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CardDetailsComponent } from './card-details/card-details.component';
 import { MenuToolBarComponent } from './menu-tool-bar/menu-tool-bar.component';  
 
@@ -22,11 +23,13 @@ import { MenuToolBarComponent } from './menu-tool-bar/menu-tool-bar.component';
     YuGiOhCardsComponent,
     CardDetailsComponent,
     MenuToolBarComponent,
-  
     
+ 
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    ButtonModule,
     BreadcrumbModule,
     AccordionModule,
     AppRoutingModule,

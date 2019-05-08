@@ -1,15 +1,22 @@
 <router-outlet></router-outlet>
+
+
 <div class="ui-g" *ngFor="let cardId of result[0]">
 <div class="ui-g-4">   
     <img src="{{cardId.image_url}}">
     <!-- <a class="waves-effect waves-light btn" (click)=AddToDeck(card.id)>Add Card to deck</a> -->
 </div>
-<div class="ui-g-8">
+<div id="Details" class="ui-g-8">
     <h1>{{cardId.name}} </h1>
-    <h2>Type of card: {{cardId.type}} </h2>
-    <h2>Race of card: {{cardId.race}} </h2>
-    <h2 >Set of card: {{cardId.archetype}} </h2>    
- 
+    <h3>Type of card: {{cardId.type}} </h3>
+    <h3>Attack of card: {{cardId.atk}} </h3>
+    <h3>Defence of card: {{cardId.def}} </h3>
+    <h3>Race of card: {{cardId.race}} </h3>
+    <h3 >Set of card: {{cardId.setcode}} </h3>  
+    <h3>Level: {{cardId.level}}</h3> 
+    <h3>Card type's countries: {{cardId.la}}</h3>
+    <p>{{cardId.desc}}</p> 
+    <button pButton type="button" label="Add card to your deck" ></button>
 </div>
 </div>
 
