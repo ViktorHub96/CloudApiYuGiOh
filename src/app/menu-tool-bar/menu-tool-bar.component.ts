@@ -14,9 +14,9 @@ export class MenuToolBarComponent implements OnInit {
     
     ngOnInit() {
         this.items = [
-            {label:'Home'},
-            {label:'Cards'},
-            {label:'Decks'}
+            {label:'Home', url:'/home'},
+            {label:'Cards', url:'/Yugi'},
+            {label:'Decks', url:'/decks'}
         ];
     }
 
