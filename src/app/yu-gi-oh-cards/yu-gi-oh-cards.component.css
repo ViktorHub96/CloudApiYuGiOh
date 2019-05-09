@@ -4,8 +4,19 @@
     border-color: blanchedalmond;
 }
 #searchbutton{
-    left: 2%;
+
 }
-.p-dropdown{
-    left: 10%;
+button{
+    
+}
+#left{
+    width: 100%;
+}
+#left2{
+    width: 100%
+}
+h3{
+    float: left;
+    margin: 1%;
+    color: rgb(231, 132, 10)
 }

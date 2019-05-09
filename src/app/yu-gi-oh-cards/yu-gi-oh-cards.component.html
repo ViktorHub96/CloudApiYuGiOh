@@ -8,11 +8,32 @@
     <p-dropdown  [options]="optie" [(ngModel)]="options" optionLabel="name" id="dropdown"></p-dropdown>
     <button id="searchbutton" pButton (click)="spel($event)" type="button" class="ui-button-raised ui-button-rounded" label="Search"></button>
 </span>
-  <button pButton (click)="spel($event)" type="button" class="ui-button-raised ui-button-rounded" label="Spellcard"></button>
-  <button pButton (click)="test($event)" type="button" class="ui-button-raised ui-button-rounded" label="Allcards"></button>
+  <br>
+  <div id="left">
+  <h3>Attributes</h3>
+  <button pButton (click)="dark($event)" type="button" class="ui-button-raised ui-button-rounded" label="DARK"></button>
+  <button pButton (click)="light($event)" type="button" class="ui-button-raised ui-button-rounded" label="LIGHT"></button>
+  <button pButton (click)="earth($event)" type="button" class="ui-button-raised ui-button-rounded" label="EARTH"></button>
+  <button pButton (click)="water($event)" type="button" class="ui-button-raised ui-button-rounded" label="WATER"></button>
+  <button pButton (click)="fire($event)" type="button" class="ui-button-raised ui-button-rounded" label="FIRE"></button>
+  <button pButton (click)="wind($event)" type="button" class="ui-button-raised ui-button-rounded" label="WIND"></button>
+  <button pButton (click)="divine($event)" type="button" class="ui-button-raised ui-button-rounded" label="DIVINE"></button>
+  </div>
+  <br>
+
+  <div id="left2">
+    <h3>Icon</h3>
+    <button pButton (click)="equip($event)" type="button" class="ui-button-raised ui-button-rounded" label="Equip"></button>
+    <button pButton (click)="field($event)" type="button" class="ui-button-raised ui-button-rounded" label="Field"></button>
+    <button pButton (click)="quikplay($event)" type="button" class="ui-button-raised ui-button-rounded" label="Quik-Play"></button>
+    <button pButton (click)="ritual($event)" type="button" class="ui-button-raised ui-button-rounded" label="Ritual"></button>
+    <button pButton (click)="cont($event)" type="button" class="ui-button-raised ui-button-rounded" label="Continuous"></button>
+    <button pButton (click)="counter($event)" type="button" class="ui-button-raised ui-button-rounded" label="Counter"></button>
+    <button pButton (click)="normal($event)" type="button" class="ui-button-raised ui-button-rounded" label="Normal"></button>
+    </div>
 </div>
 
-<!doctype html>
+
 <div class="ui-g-12 ui-g-nopad" *ngFor="let card of result[0]; let i = index">
   <div class="ui-g"*ngIf="i<=99">
       <div class="ui-g-12 ui-md-4">
