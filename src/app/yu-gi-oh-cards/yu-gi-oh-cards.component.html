@@ -32,20 +32,20 @@
     <button pButton (click)="normal($event)" type="button" class="ui-button-raised ui-button-rounded" label="Normal"></button>
     </div>
 </div>
+<br>
 
-
-<div class="ui-g-12 ui-g-nopad" *ngFor="let card of result[0]; let i = index">
+<!-- <div class="ui-g-12 ui-g-nopad" *ngFor="let card of result[0]; let i = index">
   <div class="ui-g"*ngIf="i<=99">
       <div class="ui-g-12 ui-md-4">
         <a a routerLink='/Details/{{card.id}}'>
         <img src="{{card?.image_url}}">
       </a></div>
-      <div class="ui-g-12 ui-md-4">
-       test
-      </div>
-      <div class="ui-g-12 ui-md-4"></div>
-    
+  
     
   </div>
+  
+</div> -->
+<div class="row" *ngFor="let card of result[0]; let i = index">
+  <div class="col s12 m4 l2" *ngIf="i<=99"> <img src="{{card?.image_url}}"></div>
   
 </div>
