@@ -45,7 +45,11 @@
   </div>
   
 </div> -->
-<div class="row" *ngFor="let card of result[0]; let i = index">
-  <div class="col s12 m4 l2" *ngIf="i<=99"> <img src="{{card?.image_url}}"></div>
-  
+<div class="row">
+  <div *ngFor="let card of result[0]; let i = index">
+    <div class="col s4" *ngIf="i<=99"> <a a routerLink='/Details/{{card.id}}'><img src="{{card?.image_url}}"> 
+      </a>
+    </div>
+    
+  </div>
 </div>

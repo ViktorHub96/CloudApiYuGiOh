@@ -1,20 +1,25 @@
 <router-outlet></router-outlet>
 
 
-<div class="ui-g" *ngFor="let cardId of result[0]">
-<div class="ui-g-4">   
+<div class="row" *ngFor="let cardId of result[0]">
+<div class="col s4">   
     <img src="{{cardId.image_url}}">
     <!-- <a class="waves-effect waves-light btn" (click)=AddToDeck(card.id)>Add Card to deck</a> -->
 </div>
-<div id="Details" class="ui-g-8">
-    <h1>{{cardId.name}} </h1>
-    <h3>Type of card: {{cardId.type}} </h3>
-    <h3>Attack of card: {{cardId.atk}} </h3>
-    <h3>Defence of card: {{cardId.def}} </h3>
-    <h3>Race of card: {{cardId.race}} </h3>
-    <h3 >Set of card: {{cardId.setcode}} </h3>  
-    <h3>Level: {{cardId.level}}</h3> 
-    <h3>Card type's countries: {{cardId.la}}</h3>
+<div id="Details" class="col s8">
+    <div class="row">
+    <div class="col s6" id="b"><h5>attribute {{cardId.attribute}} </h5></div>
+    <div class="col s6" id="b"><h5>Level: {{cardId.level}}</h5></div>
+    <div class="col s12" id="b"><h5>Monster Type {{cardId.race}} </h5></div>        
+    </div>
+    <h3>{{cardId.name}} </h3>
+    <h5>Type of card: {{cardId.type}} </h5>
+    <h5>Attack of card: {{cardId.atk}} </h5>
+    <h5>Defence of card: {{cardId.def}} </h5>
+    
+    <h5>Set of card: {{cardId.setcode}} </h5>  
+     
+    <h5>Card type's countries: {{cardId.la}}</h5>
     <p>{{cardId.desc}}</p> 
     <button pButton type="button" label="Add card to your deck" ></button>
 </div>

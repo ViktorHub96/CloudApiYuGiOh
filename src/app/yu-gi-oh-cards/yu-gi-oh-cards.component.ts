@@ -20,6 +20,7 @@ export class YuGiOhCardsComponent implements OnInit {
   public result: any = [];
   public optie: City[];
   public Options: City;
+  syntax : string = "";
 
   constructor(private http: HttpClient,private router: Router) {
     this.optie = [
@@ -32,16 +33,23 @@ export class YuGiOhCardsComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php")
+    
+    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php" + this.syntax)
+    .subscribe(data => {
+      this.result = data;
+      console.log(this.result)
+      console.log("Kaarten laden")
+    },err => console.log(err));
+  }
+  /*ngDoCheck(){
+    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php" + this.syntax)
     .subscribe(data => {
       this.result = data;
       console.log(this.result)
       console.log("Kaarten laden")
     },err => console.log(err));
 
-   
-    
-  }
+  }*/
   test(){
     this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php")
     .subscribe(data => {
@@ -51,6 +59,15 @@ export class YuGiOhCardsComponent implements OnInit {
     },err => console.log(err));
   
 
+  }
+  ngOnChanges(){
+    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php" + this.syntax)
+    .subscribe(data => {
+      this.result = data;
+      console.log(this.result)
+      console.log("Kaarten laden")
+    },err => console.log(err));
+    
   }
   spel()
   {
@@ -62,123 +79,60 @@ export class YuGiOhCardsComponent implements OnInit {
       },err => console.log(err));
   }
   water(){  
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?attribute=water")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("water Kaarten laden")
-      },err => console.log(err));
+    this.syntax = "?attribute=water"
+    this.ngOnInit();
   }
   dark(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?attribute=dark")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("dark Kaarten laden")
-      },err => console.log(err));
-
+    this.syntax = "?attribute=dark"
+    this.ngOnInit();
   }
   earth(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?attribute=earth")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("earth Kaarten laden")
-      },err => console.log(err));
-
+    this.syntax = "?attribute=earth"
+    this.ngOnInit();
   }
   divine(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?attribute=divine")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("divine Kaarten laden")
-      },err => console.log(err));
-
+    this.syntax = "?attribute=divine"
+    this.ngOnInit();
   }
   light(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?attribute=light")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("light Kaarten laden")
-      },err => console.log(err));
-
+    this.syntax = "?attribute=light"
+    this.ngOnInit();
   }
   fire(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?attribute=fire")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("fire Kaarten laden")
-      },err => console.log(err));
+    this.syntax = "?attribute=fire"
+    this.ngOnInit();
 
   }
   wind(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?attribute=wind")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("wind Kaarten laden")
-      },err => console.log(err));
-
+    this.syntax = "?attribute=wind"
+    this.ngOnInit();
   }
   equip(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?type=spell%20card&race=equip")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("Spel Kaarten laden")
-      },err => console.log(err));
+    this.syntax="?type=spell%20card&race=equip"
+    this.ngOnInit();
   }
   field(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?type=spell%20card&race=field")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("Spel Kaarten laden")
-      },err => console.log(err));
+    this.syntax="?type=spell%20card&race=field"
+    this.ngOnInit();
   }
   quikplay(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?type=spell%20card&race=Quick-Play")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("Spel Kaarten laden")
-      },err => console.log(err));
+    this.syntax="?type=spell%20card&race=Quick-Play"
+    this.ngOnInit();
   }
   ritual(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?type=spell%20card&race=Ritual")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("Spel Kaarten laden")
-      },err => console.log(err));
+    this.syntax ="?type=spell%20card&race=Ritual"
+    this.ngOnInit();
   }
   cont(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?race=Continuous")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("Continuous Kaarten laden")
-      },err => console.log(err));
+    this.syntax="?race=Continuous"
+    this.ngOnInit();
   }
   counter(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?race=Counter")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("Continuous Kaarten laden")
-      },err => console.log(err));
+    this.syntax="?race=Counter"
+    this.ngOnInit();
   }
   normal(){
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php?race=Normal")
-      .subscribe(data => {
-        this.result = data;
-        console.log(this.result)
-        console.log("Continuous Kaarten laden")
-      },err => console.log(err));
+    this.syntax = "?race=Normal"
+    this.ngOnInit();
   }
-  
-
 }

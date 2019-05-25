@@ -1,14 +1,18 @@
-h1,h2,H3{
+h3,h5{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: goldenrod
 }
-.Details{
+#Details{
     width: 700px;
-  border: 5px solid darkgoldenrod;
+  border: 3px solid darkgoldenrod;
   padding: 5px;
   margin: 10px;
 }
 p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: left
+}
+#b{
+    border: 1px solid darkgoldenrod;
+   
 }
