@@ -1,13 +1,7 @@
 <h1>Time to duel</h1>
+
 <div id="box">
   
-  
-  <span class="ui-float-label">
-    <input id="float-input" type="text" size="30" pInputText> 
-    <label for="float-input">Enter Keyword</label>
-    <p-dropdown  [options]="optie" [(ngModel)]="options" optionLabel="name" id="dropdown"></p-dropdown>
-    <button id="searchbutton" pButton (click)="spel($event)" type="button" class="ui-button-raised ui-button-rounded" label="Search"></button>
-</span>
   <br>
   <div id="left">
   <h3>Attributes</h3>
@@ -30,9 +24,21 @@
     <button pButton (click)="cont($event)" type="button" class="ui-button-raised ui-button-rounded" label="Continuous"></button>
     <button pButton (click)="counter($event)" type="button" class="ui-button-raised ui-button-rounded" label="Counter"></button>
     <button pButton (click)="normal($event)" type="button" class="ui-button-raised ui-button-rounded" label="Normal"></button>
+    
+  </div>
+  
+<div class="ui-g ui-fluid" id="left3">
+    <h3>Button Addons</h3>
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <button pButton (click)="search($event)" type="button" label="Search"></button>
+            <input type="text" pInputText placeholder="Card name"  id="kaart" [(ngModel)]="kaart">         
+        </div>
     </div>
+   
 </div>
 <br>
+
 
 <!-- <div class="ui-g-12 ui-g-nopad" *ngFor="let card of result[0]; let i = index">
   <div class="ui-g"*ngIf="i<=99">
@@ -45,11 +51,15 @@
   </div>
   
 </div> -->
-<div class="row">
-  <div *ngFor="let card of result[0]; let i = index">
-    <div class="col s4" *ngIf="i<=99"> <a a routerLink='/Details/{{card.id}}'><img src="{{card?.image_url}}"> 
+<br>
+<!-- <a class="waves-effect waves-light btn" id="button1">Next</a> -->
+<div class="row" id="cardbox">
+  <div *ngFor="let card of result[0]; let i = index;">
+      
+    <div class="col s4" *ngIf="i<=98;"> <a a routerLink='/Details/{{card.id}}'><img src="{{card?.image_url}}"> 
       </a>
     </div>
     
   </div>
 </div>
+<!-- <a class="waves-effect waves-light btn" id="button1"> Next</a> -->

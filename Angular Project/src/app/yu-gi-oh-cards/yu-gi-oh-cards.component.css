@@ -1,18 +1,35 @@
 #box{
+   
     border-style: solid;
     border-width: 2px;
     border-color: blanchedalmond;
 }
-#searchbutton{
+#cardbox{
+    border-style: solid;
+    border-width: 4px;
+    border-color: blanchedalmond;
 
 }
-button{
+#left3{
+    left: 0%;
+    width: 100%;
+
+}
+#button1{
+    position: absolute;
+    right: 20px;
+  width: 150px;
+  height: 50px;
+  padding: 10px;
     
 }
 #left{
+    left: 0%;
     width: 100%;
 }
 #left2{
+   
+    left: 0%;
     width: 100%
 }
 h3{

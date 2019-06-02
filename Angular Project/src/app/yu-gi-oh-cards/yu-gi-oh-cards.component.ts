@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import {SelectItem} from 'primeng/api';
+import { NgModel } from '@angular/forms';
+import { asPureExpressionData } from '@angular/core/src/view';
 
-interface City {
-  name: string;
-  code: string;
-}
+
 
 @Component({
   selector: 'app-yu-gi-oh-cards',
@@ -18,23 +17,17 @@ interface City {
 export class YuGiOhCardsComponent implements OnInit {
   
   public result: any = [];
-  public optie: City[];
-  public Options: City;
   syntax : string = "";
+  srch : any = "";
+  kaart : any = "";
+  testKnop : boolean = false;
 
   constructor(private http: HttpClient,private router: Router) {
-    this.optie = [
-      {name: 'Search by Card Name', code: 'CN'},
-      {name: 'Search by Card Text', code: 'CT'},
-      {name: 'Search by Pendulum Effect', code: 'PE'},
-      {name: 'Search by Card Number', code: 'CNU'},
-     
-    ];
    }
 
   ngOnInit() {
     
-    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php" + this.syntax)
+    this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php" + this.syntax + this.srch)
     .subscribe(data => {
       this.result = data;
       console.log(this.result)
@@ -50,6 +43,7 @@ export class YuGiOhCardsComponent implements OnInit {
     },err => console.log(err));
 
   }*/
+
   test(){
     this.http.get("https://db.ygoprodeck.com/api/v4/cardinfo.php")
     .subscribe(data => {
@@ -134,5 +128,15 @@ export class YuGiOhCardsComponent implements OnInit {
   normal(){
     this.syntax = "?race=Normal"
     this.ngOnInit();
+  }
+  search(){
+    this.syntax = "?name="
+    this.srch = this.kaart
+    this.ngOnInit();
+
+  }
+  knop(){
+    this.testKnop = true
+    
   }
 }

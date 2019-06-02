@@ -1,9 +1,11 @@
-  <h2><a a routerLink='/Yugi'>CARDS</a></h2> 
-
-  <div class="ui-g">
-    <div class="ui-g-4">Col1</div>
-    <div class="ui-g-4">Col2</div>
-    <div class="ui-g-4">Col3</div>
+<h1 text-align="center">Welcome to YuGiOh DeckBuilder</h1>
+<h3 *ngFor="let test of time[0]">{{test.timezone}}</h3>
+<br>
+  <div class="ui-g" *ngFor="let cardId of result[0]" >
+    <div class="ui-g-4"><img src="{{cardId.image_url}}"id="card1"></div>
+    <div class="ui-g-4" >
+      <iframe width="600" height="315" src="https://www.youtube.com/embed/GIudiBJpbLI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe></div>
+    <div class="ui-g-4"><img src="{{cardId.image_url}}" id="card2"></div>
 </div>
 
 
