@@ -12947,11 +12947,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pevik\\source\\repos\\YuGiOhEigenApiProjectViktorPera\\YuGiOhEigenApiProjectViktorPera\\YuGiOhEigenApiProjectViktorPera.csproj",
+      "projectUniqueName": "D:\\GITHUB\\CloudApiYuGiOh\\BackEndDeckBuilder\\YuGiOhEigenApiProjectViktorPera\\YuGiOhEigenApiProjectViktorPera\\YuGiOhEigenApiProjectViktorPera.csproj",
       "projectName": "YuGiOhEigenApiProjectViktorPera",
-      "projectPath": "C:\\Users\\pevik\\source\\repos\\YuGiOhEigenApiProjectViktorPera\\YuGiOhEigenApiProjectViktorPera\\YuGiOhEigenApiProjectViktorPera.csproj",
+      "projectPath": "D:\\GITHUB\\CloudApiYuGiOh\\BackEndDeckBuilder\\YuGiOhEigenApiProjectViktorPera\\YuGiOhEigenApiProjectViktorPera\\YuGiOhEigenApiProjectViktorPera.csproj",
       "packagesPath": "C:\\Users\\pevik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pevik\\source\\repos\\YuGiOhEigenApiProjectViktorPera\\YuGiOhEigenApiProjectViktorPera\\obj\\",
+      "outputPath": "D:\\GITHUB\\CloudApiYuGiOh\\BackEndDeckBuilder\\YuGiOhEigenApiProjectViktorPera\\YuGiOhEigenApiProjectViktorPera\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
