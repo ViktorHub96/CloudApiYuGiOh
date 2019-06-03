@@ -29,7 +29,7 @@ namespace YuGiOhEigenApiProjectViktorPera
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<YUGIOHCONTEXT>(
-                options => options.UseSqlServer(
+                options => options.UseMySQL(
                     Configuration.GetConnectionString("DefaultConnection")
                 )
             );
